@@ -1,0 +1,27 @@
+# Ignore VS Code workspace settings
+.vscode/
+
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.dylib
+
+# Compiled application
+/build/
+
+# Visual Studio / IDE files
+.vs/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Inputs/outputs used for testing
+input.txt
+output.txt
