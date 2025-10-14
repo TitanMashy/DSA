@@ -1,0 +1,66 @@
+# MacOS
+.DS_Store
+
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Compiled binaries (common names)
+/build/
+/bin/
+/*.out
+/*.exe
+
+# C++ specific
+*.gch
+*.pch
+*.dSYM/
+
+# Visual Studio Code
+.vscode/
+
+# Code Runner outputs
+output.txt
+input.txt
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Backup and temp files
+*~
+*.swp
+
+# Logs
+*.log
+
+# JetBrains
+.idea/
+
+# Homebrew cache
+/Library/Caches/Homebrew
+
+# Other
+node_modules/
+
+# Ignore compiled test binaries generically
+debug/
+release/
+
+# Ignore object files and libraries
+*.a
+*.lib
+*.so
+*.dylib
+
+# Ignore coverage
+coverage/
+
+# Ignore compiled python files
+__pycache__/
+*.py[cod]
