@@ -35,6 +35,7 @@ Makefile
 # Backup and temp files
 *~
 *.swp
+test.cpp
 
 # Logs
 *.log
