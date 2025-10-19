@@ -2,12 +2,13 @@
 using namespace std;
 
 bool is_prime(int n){
-    int i=0;
+    if (n <= 1) return false;
+    int i=1;
     int cnt=0;
     while(i*i<n){
-        if(n%i == 0){
+        if(n%i == 0){ //11 % 1
             cnt++;
-            if(i != n/i){
+            if(i != n/i){ // 1 != 11
                 cnt++;
             }
         }

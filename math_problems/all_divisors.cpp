@@ -9,10 +9,11 @@ vector<int>ans(int num){
     // faster than sqrt/
     while (i*i<=num) //optimized soln --> sqrt
     {
-        if(num%i == 0){
+        if(num%i == 0){ // 6 % 6
             ans.push_back(i);
-            if(i != num/i){
-                ans.push_back(num/i);
+            if(i != num/i){ // 6 != 36/6
+                //check for duplicate factors
+                ans.push_back(num/i); 
             }
         }
         i++;
