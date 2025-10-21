@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void fibo(int n)
+void fibo(int n) //fibonacci series
 {
     int first = 0;
     int second = 1;
