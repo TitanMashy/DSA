@@ -1,27 +1,67 @@
-# Ignore VS Code workspace settings
-.vscode/
+# MacOS
+.DS_Store
 
 # Build artifacts
 *.o
 *.obj
 *.exe
 *.out
-*.dll
-*.so
-*.dylib
+*.app
 
-# Compiled application
+# Compiled binaries (common names)
 /build/
+/bin/
+/*.out
+/*.exe
 
-# Visual Studio / IDE files
-.vs/
+# C++ specific
+*.gch
+*.pch
+*.dSYM/
 
-# MacOS
-.DS_Store
+# Visual Studio Code
+.vscode/
+
+# Code Runner outputs
+output.txt
+input.txt
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Backup and temp files
+*~
+*.swp
+test.cpp
 
 # Logs
 *.log
 
-# Inputs/outputs used for testing
-input.txt
-output.txt
+# JetBrains
+.idea/
+
+# Homebrew cache
+/Library/Caches/Homebrew
+
+# Other
+node_modules/
+
+# Ignore compiled test binaries generically
+debug/
+release/
+
+# Ignore object files and libraries
+*.a
+*.lib
+*.so
+*.dylib
+
+# Ignore coverage
+coverage/
+
+# Ignore compiled python files
+__pycache__/
+*.py[cod]
