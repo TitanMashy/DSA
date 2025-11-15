@@ -2,22 +2,71 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "C/C++: g++ build active file",
+            "label": "g++: compile active file",
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g",
-                "${file}",
+                "-std=c++17",
+                "-O2",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileBasenameNoExtension}",
+                "${file}"
             ],
             "group": {
-                "kind": "build",
-                "isDefault": true
+                "kind": "none",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
             },
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "label": "g++: compile and run (with IO redirection)",
+            "type": "shell",
+            "dependsOn": "g++: compile active file",
+            "command": "cmd",
+            "args": [
+                "/C",
+                "${fileBasenameNoExtension}.exe < input.txt > output.txt"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "label": "C/C++: g++ build active file",
+//             "type": "shell",
+//             "command": "g++",
+//             "args": [
+//                 "-g",
+//                 "${file}",
+//                 "-o",
+//                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
+//             ],
+//             "group": {
+//                 "kind": "build",
+//                 "isDefault": true
+//             },
+//             "problemMatcher": [
+//                 "$gcc"
+//             ]
+//         }
+//     ]
+// }
