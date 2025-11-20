@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void merge(vector<int> &arr, int low, int mid, int high)
+void merge(vector<int>&arr, int low, int mid, int high)
 {
     vector<int> temp;
     int left = low, right = mid + 1;
@@ -20,16 +20,16 @@ void merge(vector<int> &arr, int low, int mid, int high)
     {
         temp.push_back(arr[right++]);
     }
-    for (int i = low; i <= high; i++)
-        arr[i] = temp[i - low];
+    for(int i=low; i<=high; i++){
+        arr[i] = temp[i-low]; //to fix the offset of arr with temp.
+    }
 }
 
-void merge_sort(vector<int> &arr, int low, int high)
+void merge_sort(vector<int>&arr, int low, int high)
 {
     if (low >= high)
         return;
     int mid = (low + high) / 2;
-
     merge_sort(arr, low, mid);
     merge_sort(arr, mid + 1, high);
     merge(arr, low, mid, high);
