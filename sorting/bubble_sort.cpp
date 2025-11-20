@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void bub_sort(vector<int> &v)
+void bub_sort(vector<int> &v)//bubble sort
 {
     int n = v.size();
     for (int i = n - 1; i >= 0; i--)
