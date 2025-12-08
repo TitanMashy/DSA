@@ -4,22 +4,16 @@ using namespace std;
 
 void secLar(vector<int> arr)
 {
-    int n = arr.size();
-    if (n < 2)
-    {
-        cout << "No second largest element";
-        return;
-    }
-    int largest = INT_MIN;
+    int maxi = INT_MIN;
     int secLar = INT_MIN;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < arr.size(); i++)
     {
-        if (arr[i] > largest)
+        if (arr[i] > maxi)
         {
-            secLar = largest;
-            largest = arr[i];
+            secLar = maxi;
+            maxi = arr[i];
         }
-        else if (arr[i] > secLar && secLar < largest)
+        else if (arr[i] > secLar && arr[i] < maxi)
         {
             secLar = arr[i];
         }
